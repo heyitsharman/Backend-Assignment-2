@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
+    <script src="https://kit.fontawesome.com/434e47e12a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/styles.css">
+    <script src="/script.js" ></script>
 </head>
 <body>
-    <h1>To-Do List</h1>
-    <ul>
-        <% tasks.forEach(task => { %>
-            <li><%= task.title %> - <%= task.completed ? "✔" : "❌" %></li>
-        <% }); %>
-    </ul>
-    <form action="/add-task" method="POST">
-        <input type="text" name="title" required>
-        <button type="submit">Add Task</button>
-    </form>
+    <div class="container">
+        <h1>To-Do List</h1>
+        
+        <div class="add-task-container">
+            <form action="/add-task" method="POST">
+                <input type="text" name="title" placeholder="Enter task" required>
+                <button type="submit"><i class="fa-sharp fa-solid fa-plus"></i></button>
+            </form>
+        </div>
+
+        <ul id="task-container">
+            <% tasks.forEach(task => { %>
+                <li class="<%= task.completed ? 'completed' : '' %>">
+                    <%= task.title %> - <%= task.completed ? "✔" : "❌" %>
+                    <button class="delete-btn" data-id="<%= task.id %>">❌</button>
+                    <button class="toggle-btn" data-id="<%= task.id %>">✔</button>
+                </li>
+            <% }); %>
+        </ul>
+        
+    </div>
 </body>
 </html>
