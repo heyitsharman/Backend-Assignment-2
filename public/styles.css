@@ -1,4 +1,4 @@
-/* Reset default margin and padding */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +6,11 @@
     font-family: Arial, sans-serif;
 }
 
-/* Full-screen layout */
+
 body {
     height: 100vh;
     width: 100vw;
-    background-image: url("/bg-image.jpg"); /* Ensure bg-image.jpg is in the public folder */
+    background-image: url("https://quotefancy.com/media/wallpaper/3840x2160/8046315-CONQUER-Wallpaper.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -19,7 +19,7 @@ body {
     flex-direction: column;
 }
 
-/* Main container */
+
 .container {
     width: 400px;
     background-color: white;
@@ -29,7 +29,7 @@ body {
     text-align: center;
 }
 
-/* Input field & add button container */
+
 .add-task-container {
     display: flex;
     align-items: center;
@@ -64,13 +64,11 @@ input {
     background-color: darkgreen;
 }
 
-/* Task container */
 #task-container {
     margin-top: 15px;
     width: 100%;
 }
 
-/* Individual task styling */
 .task {
     display: flex;
     align-items: center;
@@ -82,7 +80,6 @@ input {
     margin-top: 10px;
 }
 
-/* Task text */
 .task li {
     flex: 4;
     font-size: 1.2rem;
@@ -93,7 +90,6 @@ input {
     white-space: nowrap;
 }
 
-/* Task buttons */
 .task button {
     flex: 1;
     padding: 5px;
@@ -104,7 +100,6 @@ input {
     transition: 0.3s;
 }
 
-/* Check (Complete) Button */
 button.check-button {
     background-color: white;
     color: orange;
@@ -116,7 +111,7 @@ button.check-button:hover {
     color: white;
 }
 
-/* Delete Button */
+
 button.delete-button {
     background-color: white;
     color: red;
@@ -128,14 +123,12 @@ button.delete-button:hover {
     color: white;
 }
 
-/* Completed task style */
 .completed {
     text-decoration: line-through;
     color: gray;
     opacity: 0.7;
 }
 
-/* Responsive Design */
 @media (max-width: 480px) {
     .container {
         width: 90%;

@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = 3000;
-const tasksFile = path.join(__dirname, "tasks.json");
+const tasksFile = path.join(__dirname, "Tasks.json");
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
